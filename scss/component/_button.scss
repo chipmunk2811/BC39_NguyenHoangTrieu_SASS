@@ -1,0 +1,20 @@
+.button {
+  @include button($color-white-1, $fs-2, $pd-2 + 3, $pd-3, none, $rad-2, $color-white-1);
+  box-shadow: 0 0 0 3rem $color-violet-1 inset;
+  font-weight: $fw-2;
+  margin: $m-1;
+  line-height: $fs-2;
+  transition: all 0.5s ease;
+  transition: all 0.5s;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+
+  i {margin-right: $m-1;}
+
+  &:hover {
+    color: $color-violet-1;
+    box-shadow: 0 0 0 1px $color-violet-1 inset;
+  }
+}

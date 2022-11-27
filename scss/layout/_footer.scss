@@ -1,0 +1,125 @@
+footer {
+   @include backGround("footer_background.jpg", cover, center);
+   padding: ($pd-8 + 20px) 0;
+
+   .row {
+      margin-left: -($m-6);
+      margin-right: -($m-6);
+
+
+
+      .footer__link {
+         @extend .footer__contact;
+
+         .link__title {
+            @include text($fs-6, $fw-4, $color-white-1);
+            margin-bottom: $m-5;
+         }
+
+         ul {
+            li {
+               border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+               padding: $pd-2 0;
+               line-height: 1;
+
+               a {
+                  text-decoration: none;
+                  @include text($fs-2, inherit, $color-white-1);
+                  transition: all 0.2s ease;
+
+                  &:hover {
+                     opacity: 0.8;
+                  }
+               }
+
+               &:nth-child(1) {
+                  padding-top: 0;
+               }
+            }
+         }
+      }
+
+      .footer__form {
+
+         @extend .footer__contact;
+
+         .link__title {
+            @include text($fs-6, $fw-4, $color-white-1);
+            margin-bottom: $m-6 + 5px;
+         }
+
+         input {
+            @include input($rad-2, rgba(255, 255, 255, 0.1), unset);
+            color: $color-white-1;
+            background-color: transparent;
+            text-align: center;
+            padding: $pd-2;
+            outline: none;
+
+            &::placeholder {
+               color: $color-white-1;
+            }
+
+            &:focus {
+               border-color: $color-white-1;
+               background-color: transparent;
+               box-shadow: none;
+               outline: none;
+            }
+         }
+
+         .footer__button {
+            background-color: transparent;
+            color: $color-black-1;
+            line-height: $lh-1;
+            height: 48px;
+            letter-spacing: 1px;
+            padding: unset;
+            font-size: $fs-1 -1px;
+            width: 100%;
+            margin: unset;
+            box-shadow: 0 0 0 3rem $color-white-1 inset;
+
+            &:hover {
+               color: $color-white-1;
+               box-shadow: 0 0 0 1px $color-white-1 inset;
+            }
+         }
+      }
+
+      .footer__contact {
+         margin-bottom: $m-9;
+         margin-left: $m-4;
+         margin-right: $m-4;
+
+         .link__title {
+            @include text($fs-6, $fw-4, $color-white-1);
+            margin-bottom: $m-5;
+         }
+
+         .footer__social {
+            line-height: 1;
+
+            li {
+               a {
+                  @include text($fs-2, inherit, $color-white-1);
+               }
+            }
+         }
+
+         .footer__info {
+            margin-bottom: $m-5;
+
+            li {
+               @include text($fs-2, inherit, $color-white-1);
+               margin-bottom: $m-2;
+               line-height: 1;
+
+               &:last-of-type {
+                  margin-bottom: unset;
+               }
+            }
+         }
+      }
+   }
+}

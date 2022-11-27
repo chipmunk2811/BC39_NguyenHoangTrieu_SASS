@@ -1,0 +1,81 @@
+.registration {
+   padding-top: $pd-7;
+ 
+   .registration__inner {
+      width: 1000px;
+      margin: auto;
+ 
+      .registration__img {
+         margin-top: $m-7 + 6px;
+         margin-bottom: $m-5;
+      }
+ 
+      .registration__form {
+         background-color: $color-white-1;
+         border-radius: $rad-1;
+         padding-left: $pd-3 + 5px;
+         padding-right: $pd-3 + 5px;
+         box-shadow: 0 30px 30px -10px rgba(0, 0, 0, 0.2);
+ 
+         form {
+            padding-bottom: $pd-6 - 4px;
+ 
+            h2 {
+               @include text($fs-7, $fw-4, inherit);
+               margin-top: $m-6;
+               margin-bottom: $m-7;
+            }
+ 
+            .form-group {
+               width: 100%;
+               position: relative;
+ 
+               i {
+                  position: absolute;
+                  top: 15px;
+                  left: 15px;
+                  color: $color-violet-1;
+               }   
+ 
+               input {
+                  @include text($fs-1 - 1px, $fw-1, $color-black-1);
+                  @include input($rad-2, rgba(0, 0, 0, 0.1), 44px);
+                  transition: all 0.5s ease;
+ 
+                  &:focus {
+                     border-color: rgba(0, 0, 0, 0.3);
+                     outline: none;
+                     box-shadow: none;
+                  }
+               }   
+               select {
+                  @extend input;
+                  height: unset;
+                  option {
+                     color: $color-black-1;
+                  }
+               }  
+               textarea {
+                  @extend input;
+                  @include input($rad-1 * 2, rgba(0, 0, 0, 0.1), unset);
+                  padding-bottom: $pd-2 + 3px;
+               }
+            }
+ 
+            .form__button {
+               width: 150px;
+               letter-spacing: 1px;
+               height: 48px;
+               margin-top: $m-5;
+            }
+ 
+            .error {
+               height: 24px;
+            }
+         }
+      }
+   }
+}
+
+
+ 
