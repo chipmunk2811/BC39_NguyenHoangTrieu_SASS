@@ -1,0 +1,30 @@
+@mixin text($fs, $fw, $color) {
+   color: $color !important;
+   font-size: $fs;
+   font-weight: $fw;
+ }
+ 
+@mixin button($bg, $fs, $pd-y, $pd-x, $bd, $radius, $color) {
+   color: $color;
+   background-color: $bg;
+   font-size: $fs;
+   padding: $pd-y $pd-x;
+   border-radius: $radius;
+   border: $bd;
+}
+
+@mixin input($radius, $border-color, $h) {
+   border: 1px solid $border-color;
+   height: $h;
+   border-radius: $radius;
+   padding: $pd-2 $pd-2 $pd-2 ($pd-6 - 2.5px);
+   outline: none;
+ }
+
+@mixin backGround($bg, $size, $ps) {
+   background: url("../image/#{$bg}");
+   background-size: $size;
+   background-position: $ps;
+   background-repeat: no-repeat;
+}
+
