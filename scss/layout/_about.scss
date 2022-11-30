@@ -1,0 +1,20 @@
+.about {
+   z-index: 0;
+   padding: $pd-7 0;
+   @include backGround("yellow_top_wave_01.png", contain, top left);
+ 
+   .about__content {
+      margin-top: $m-7 + 6px;
+      margin-bottom: $m-7 + 6px;
+ 
+      h2 {
+         @include text($fs-3, $fw-3, $color-violet-1);
+         margin-bottom: $m-1 + 2px;
+      }
+ 
+      h1 {
+         @include text($fs-4, $fw-4, $color-black-2);
+      }
+   }
+}
+ 
